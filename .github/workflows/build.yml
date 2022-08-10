@@ -1,0 +1,20 @@
+name: build nodejs
+
+on: 
+  workflow_dispatch:
+
+
+jobs:
+  build_ios:
+    name: iOS
+    runs-on: macos-12
+    steps:
+    - uses: actions/checkout@v2
+    - name: Show SDK
+      run: |
+        xcodebuild -version -sdk
+    - name: Run build script
+      run: |
+        cd $GITHUB_WORKSPACE
+        sh ./ios.sh ${{env.VERSION}}
+
