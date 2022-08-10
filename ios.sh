@@ -10,6 +10,7 @@ echo "=====[Patching Node.js]====="
 git apply $WORKSPACE/ios_ninja_compile_for_main.patch
 git apply $WORKSPACE/handler_posix_main.patch
 git apply $WORKSPACE/rm_platform_darwin_cc_for_ios_main.patch
+git apply $WORKSPACE/disable_executable_for_ios_main.patch
 
 echo "=====[ fetch ninja for mac ]====="
 wget https://github.com/ninja-build/ninja/releases/download/v1.8.2/ninja-mac.zip
