@@ -1,0 +1,25 @@
+diff --git a/tools/v8_gypfiles/v8.gyp b/tools/v8_gypfiles/v8.gyp
+index 55f9636933..4a479ee2e0 100644
+--- a/tools/v8_gypfiles/v8.gyp
++++ b/tools/v8_gypfiles/v8.gyp
+@@ -1145,13 +1145,19 @@
+             '<(V8_ROOT)/src/base/platform/platform-fuchsia.cc',
+           ]
+         }],
+-        ['OS == "mac" or OS == "ios"', {
++        ['OS == "mac"', {
+           'sources': [
+             '<(V8_ROOT)/src/base/debug/stack_trace_posix.cc',
+             '<(V8_ROOT)/src/base/platform/platform-darwin.cc',
+             '<(V8_ROOT)/src/base/platform/platform-macos.cc',
+           ]
+         }],
++        ['OS == "ios"', {
++          'sources': [
++            '<(V8_ROOT)/src/base/debug/stack_trace_posix.cc',
++            '<(V8_ROOT)/src/base/platform/platform-darwin.cc',
++          ]
++        }],
+         ['is_win', {
+           'sources': [
+             '<(V8_ROOT)/src/base/debug/stack_trace_win.cc',
