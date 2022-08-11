@@ -52,7 +52,7 @@ if [ -f "configure" ]; then
         --dest-os=ios \
         --without-snapshot \
         --openssl-no-asm \
-        --shared \
+        --enable-static \
         --with-intl=none \
         --no-browser-globals \
         --cross-compiling
